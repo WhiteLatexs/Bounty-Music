@@ -14,7 +14,7 @@ const musicIcons = {
     heartIcon : 'https://cdn.discordapp.com/emojis/900257798003240961.gif',
     pingIcon : 'https://cdn.discordapp.com/emojis/923089856752664576.gif',
     CheckmarkIcon: "https://cdn.discordapp.com/emojis/819446784647757834.gif",
-    MusicIcon:"https://media.tenor.com/B-pEg3SWo7kAAAAj/disk.gif",
+    MusicIcon:"https://cdn.discordapp.com/emojis/763415718271385610.gif",
 };
 
 module.exports = musicIcons;
