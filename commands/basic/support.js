@@ -15,8 +15,8 @@ module.exports = {
             
             await interaction.deferReply();
 
-            const supportServerLink = "https://discord.gg/xQF9f9yUEM";
-            const githubLink = "https://github.com/GlaceYT";
+            const supportServerLink = "https://discord.gg/TaRQemxpSG";
+            const githubLink = "https://github.com/WhiteLatexs";
             const websiteLink = "https://www.glaceyt.com";
             const youtubeLink = "https://www.youtube.com/@GlaceYT";
 
