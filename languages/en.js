@@ -70,7 +70,7 @@ module.exports = {
             },
             footer: {
                 version: "**Version 1.4** • Prime Music Bot",
-                developer: "Developed by GlaceYT / https://GlaceYT.com"
+                developer: "Developed by OnlyWhi"
             },
             selectMenu: {
                 placeholder: "📂 Select a category to view commands...",
