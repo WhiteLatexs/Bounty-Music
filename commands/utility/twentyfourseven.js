@@ -1,3 +1,4 @@
+const config = require('../../config.js'); 
 const { SlashCommandBuilder, MessageFlags } = require('discord.js');
 const { getEmoji } = require('../../UI/emojis/emoji');
 const { autoplayCollection } = require('../../mongodb.js');
@@ -21,20 +22,23 @@ module.exports = {
             if (!deferred && !interaction.deferred && !interaction.replied) return;
             const lang = await getLang(interaction.guildId);
 
-            if (interaction.guild.ownerId !== interaction.user.id) {
-                const errorContainer = buildPaleCard(
-                    `${getEmoji('error')} ${sanitizeTitle(lang.utility.twentyfourseven.accessDenied.title, 'Access Denied')}`,
-                    [lang.utility.twentyfourseven.accessDenied.message]
-                );
+           const isServerOwner = interaction.guild.ownerId === interaction.user.id;
+const isBotOwner = config.ownerID.includes(interaction.user.id);
 
-                const reply = await interaction.editReply({
-                    components: [errorContainer],
-                    flags: MessageFlags.IsComponentsV2,
-                });
-                setTimeout(() => reply.delete().catch(() => {}), 3000);
-                return reply;
-            }
+if (!isServerOwner && !isBotOwner) {
+    const errorContainer = buildPaleCard(
+        `${getEmoji('error')} ${sanitizeTitle(lang.utility.twentyfourseven.accessDenied.title, 'Access Denied')}`,
+        [lang.utility.twentyfourseven.accessDenied.message]
+    );
 
+    const reply = await interaction.editReply({
+        components: [errorContainer],
+        flags: MessageFlags.IsComponentsV2,
+    });
+
+    setTimeout(() => reply.delete().catch(() => {}), 3000);
+    return reply;
+}
             const enable = interaction.options.getBoolean('enable');
             const guildId = interaction.guild.id;
 
