@@ -3,8 +3,8 @@
 module.exports = {
   TOKEN: "",
   language: "en",
-  ownerID: ["962994407651553302", ""], 
-  mongodbUri : "mongodb+srv://shiva:shiva@musicbotyt.ouljywv.mongodb.net/?retryWrites=true&w=majority",
+  ownerID: ["962994407651553302", "590354442214178856"], 
+  mongodbUri : "mongodb+srv://OnlyWhi:OnlyWhi@cluster0.w3jds5l.mongodb.net/?retryWrites=true&w=majority",
   spotifyClientId : "d92baed9605a45a39ed7c2a2d960b1c1",
   spotifyClientSecret : "e9b29f6739de4315bc03b6d8a8e93b03",
   setupFilePath: './commands/setup.json',
@@ -25,10 +25,10 @@ module.exports = {
   errorLog: "", 
   nodes: [
       {
-      name: "GlaceYT",
-      password: "glace",
-      host: "de-01.strixnodes.com",
-      port: 2010,
+      name: "af26ac57",
+      password: "FurryPutih",
+      host: "45.13.236.245",
+      port: 25847,
       secure: false
     }
   ]
